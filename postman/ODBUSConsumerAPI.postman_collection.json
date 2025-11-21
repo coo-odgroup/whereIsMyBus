@@ -1,0 +1,2832 @@
+{
+	"info": {
+		"_postman_id": "a99fa012-859d-4703-917c-808663ffa0e5",
+		"name": "ODBUSConsumerAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12959037"
+	},
+	"item": [
+		{
+			"name": "Listing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.get(\"url\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU4ODE5ODA3LCJleHAiOjE2NTg4MjM0MDcsIm5iZiI6MTY1ODgxOTgwNywianRpIjoiN3llbFlpbGtadmNtS2p4OSIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Ogc65K94MxXRBjaW4IawW1u_uCYmvJa7HBtKWwcDshE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Listing?source=Bhubaneswar&destination=baripada&entry_date=13-07-2022",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Listing"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Bhubaneswar"
+						},
+						{
+							"key": "destination",
+							"value": "baripada"
+						},
+						{
+							"key": "entry_date",
+							"value": "13-07-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Seats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5MDk2MDA3LCJleHAiOjE2NTkwOTk2MDcsIm5iZiI6MTY1OTA5NjAwNywianRpIjoiaXd0a254a2NURUlpeXRZNCIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.t5qoyrownztVQj5DampTqc1LDDmxLo4DfzJsqbG-K4Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"entry_date\":\"31-07-2022\", \r\n    \"busId\":\"285\", \r\n    \"sourceId\":\"82\", \r\n    \"destinationId\":\"53\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/viewSeats",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"viewSeats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPriceOn seatsSelection",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU4ODE5ODA3LCJleHAiOjE2NTg4MjM0MDcsIm5iZiI6MTY1ODgxOTgwNywianRpIjoiN3llbFlpbGtadmNtS2p4OSIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Ogc65K94MxXRBjaW4IawW1u_uCYmvJa7HBtKWwcDshE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"busId\":\"1\", \r\n    \"sourceId\":\"82\", \r\n    \"destinationId\":\"434\",\r\n    \"seater\": [2694],\r\n    \"sleeper\": [2755],\r\n    \"entry_date\":\"15-01-2022\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/PriceOnSeatsSelection",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"PriceOnSeatsSelection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookTicket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU4NzI2ODIyLCJleHAiOjE2NTg3MzA0MjIsIm5iZiI6MTY1ODcyNjgyMiwianRpIjoiRGptMmZ1TDJsbExRelZHZCIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.-H36QhFYqc5d07mVlTKXzUj9p4E1yzJK6vrrA0ZrfnM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerInfo\": {\r\n\t\t\"email\": \"\",\r\n\t\t\"phone\": \"1234567898\",\r\n\t\t\"name\": \"ssssss\"\r\n\t},\r\n\t\"bookingInfo\": {\r\n        \"coupon_code\": \"ODTEST3\",\r\n        \"user_id\": \"1\",\r\n\t\t\"bus_id\": \"285\",\r\n\t\t\"source_id\": \"82\",\r\n\t\t\"destination_id\": \"53\",\r\n\t\t\"journey_date\": \"2022-07-28\",\r\n\t\t\"boarding_point\": \"Bermunda\",\r\n\t\t\"dropping_point\": \"sector\",\r\n\t\t\"boarding_time\": \"21:20\",\r\n\t\t\"dropping_time\": \"00:06\",\r\n\t\t\"origin\": \"ODBUS\",\r\n\t\t\"app_type\": \"MOB\",\r\n\t\t\"typ_id\": \"1\",\r\n        \"total_fare\": 1200,\r\n        \"specialFare\": 0,\r\n        \"addOwnerFare\": 0,\r\n        \"festiveFare\": 0,\r\n\t\t\"owner_fare\": 1098,\r\n        \"odbus_service_Charges\": 77,\r\n        \"transactionFee\": 10,\r\n\t\t\"created_by\": \"Customer\",\r\n\t\t\"bookingDetail\": [\r\n\t\t\t{\r\n\t\t\t\t\"bus_seats_id\": \"3156\",\r\n\t\t\t\t\"passenger_name\": \"Dency\",\r\n\t\t\t\t\"passenger_gender\": \"M\",\r\n\t\t\t\t\"passenger_age\": \"33\",\r\n\t\t\t\t\"created_by\": \"customer\"\r\n\t\t\t}\t\r\n\t   ]\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/BookTicket",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"BookTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLocation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjJkZ0p2Zi1VdXV5am1BT0hWdXpUUCJ9.eyJpc3MiOiJodHRwczovL2Rldi1zZW9maWVkLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiIyZmdzRkNrOG1tRkpobTVFeG5lRmJYTXNUWWpBRTVOWkBjbGllbnRzIiwiYXVkIjoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2FwaS8iLCJpYXQiOjE2MzQ3OTU4NTgsImV4cCI6MTYzNDg4MjI1OCwiYXpwIjoiMmZnc0ZDazhtbUZKaG01RXhuZUZiWE1zVFlqQUU1TloiLCJzY29wZSI6InJlYWQ6bWVzc2FnZXMiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.K6oyJNHZ8K0mzljzWPb5NdeqLWN_y_cow75ZlOZBnDdIgdGfjMGtiryfqBOcYSdUbFl6zEonh3eQBbqauIt9UrtUk4T0gCBytnRuh8DBoL2vuaMmQEpiUjGqUaJmaLNiRIp1VneOfyWvWCpeLfxz6RpliNHT6e7C8R349cqwJHfbkNYeBIkGkyKW2f3cGc8RUADrV-aWfLwXgP8DIVCoPZZTH2d0shFAQKL1kif-N329R4xIBKn_ME1HK5UiTUA-WA6hntIotYZrk9qtgsfCqsjWE4qTm3ukMpOZ0dGFYAskK6-lny1SncbN_t2BTHEkr9LDO3V9JnAnZlEw02YTNA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"locationName\":\"bhu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/getLocation",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"getLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjYxNzYxMjUzLCJleHAiOjE2NjE3NjQ4NTMsIm5iZiI6MTY2MTc2MTI1MywianRpIjoicTdGcjVYV09LSTZabXo1RCIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.erHQv6jzKKCzJ_Sc7TZ5Knpa-ndXa2NcEZo_AsVU-qI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":\"0\", \r\n    \"sourceID\":\"82\", \r\n    \"destinationID\":\"32\", \r\n    \"entry_date\":\"29-08-2022\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Filter",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All BoardingDroping Points",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU4MjMxMTI5LCJleHAiOjE2NTgyMzQ3MjksIm5iZiI6MTY1ODIzMTEyOSwianRpIjoiYnpNeThrbThUbmlBRmMzciIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CnYNOFRlq2beRDljozbPmHeqSwAiAfhsz0HTe1leHps",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"busId\":\"1\", \r\n    \"sourceId\":\"82\", \r\n    \"destinationId\":\"434\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/BoardingDroppingPoints?busId=1&sourceId=82&destinationId=434",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"BoardingDroppingPoints"
+					],
+					"query": [
+						{
+							"key": "busId",
+							"value": "1"
+						},
+						{
+							"key": "sourceId",
+							"value": "82"
+						},
+						{
+							"key": "destinationId",
+							"value": "434"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendSms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"smsprovider\":\"textLocal\",\r\n    \"sender\": \"odbus\",\r\n    \"receiver\":\"9437112909\",\r\n    \"contents\":\"hello\",\r\n    \"channel_type\":\"0\",\r\n    \"acknowledgement\":\"true\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/SendSms",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"SendSms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sahu.swagatika@gmail.com\",\r\n    \"name\":\"swagatika\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/SendEmail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"SendEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make PAYMENT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5MTYwNTA0LCJleHAiOjE2NTkxNjQxMDQsIm5iZiI6MTY1OTE2MDUwNCwianRpIjoiTzFsOTB2MzhTek5CeHdUQyIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.WeuWt3p4KgAdpvwo4f93oWimylCLKaPgxUMHqBh7q2o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"busId\": 285,\r\n\t\"sourceId\": \"82\",\r\n\t\"destinationId\": \"53\",\r\n\t\"transaction_id\": \"20220727124722588401\",\r\n\t\"seatIds\": [\"3156\", \"3162\"],\r\n\t\"entry_date\": \"31-07-2022\",\r\n\t\"customer_gst_status\": false,\r\n\t\"customer_gst_number\": null,\r\n\t\"customer_gst_business_name\": null,\r\n\t\"customer_gst_business_email\": null,\r\n\t\"customer_gst_business_address\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/MakePayment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"MakePayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get FilterOptions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjYxNzc3MTE4LCJleHAiOjE2NjE3ODA3MTgsIm5iZiI6MTY2MTc3NzExOCwianRpIjoiSk1UMjI1YWJTWVhnTHNvTiIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XNeby5BgvLstFwfmtz8WI_eestLd7xvAEbrvp-M2pDc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceID\":\"82\",\r\n    \"destinationID\":\"32\",\r\n    \"busIDs\":[416,420,258]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/FilterOptions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"FilterOptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU4MTQ0MzM2LCJleHAiOjE2NTgxNDc5MzYsIm5iZiI6MTY1ODE0NDMzNiwianRpIjoieXdFb3VYSGJYOE8zZ0VsVSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.XhsvA1IXXQGOEKTLDzAtZgCL3nDhhVWc1WodcZCZdZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"991645757\"\r\n    \r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjYxMTQ4MTAzLCJleHAiOjE2NjExNTE3MDMsIm5iZiI6MTY2MTE0ODEwMywianRpIjoiVGlYQXVwRWxZVVpzWTNKdSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1CqJM9C-59UMOCfq83gXn4f36Z8qTZFuu1aFAb5bX0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"rama\",\r\n    \"email\":\"sahu.swagatika@gmail.com\",\r\n    \"created_by\":\"rama\",\r\n    \"fcmId\":\"123456\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway Information",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sender\": \"ODBUSS\",\r\n    \"channel_type\":0,\r\n    \"service_provider\":\"textLocal\",\r\n    \"contents\":\"Dear <name>, Your OTP is <otp> to login ODBUS. Thanks - ODBUS\",\r\n    \"created_by\":\"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/storeGWInfo",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"storeGWInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User RegiSession-SMS-GW-TextLocal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"P\",\r\n    \"email\":\"prince@gmail.com\",\r\n    \"phone\":\"8249113251\",\r\n    \"password\":\"passw\",\r\n    \"smsprovider\":\"textLocal\",\r\n    \"sender\":\"ODBUSS\",\r\n    \"message\":\"Dear <name>, Your OTP is <otp> to login ODBUS. Thanks - ODBUS\",\r\n    \"created_by\":\"Admin\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/RegisterSession",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"RegisterSession"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify OTP",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjYxMTQ4MTAzLCJleHAiOjE2NjExNTE3MDMsIm5iZiI6MTY2MTE0ODEwMywianRpIjoiVGlYQXVwRWxZVVpzWTNKdSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1CqJM9C-59UMOCfq83gXn4f36Z8qTZFuu1aFAb5bX0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"8336\",\r\n    \"otp\":\"32123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/VerifyOtp",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"VerifyOtp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS delivery status check",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/smsDeliveryStatus",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"smsDeliveryStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"userId\":\"1\",\r\n     \"token\":\"F26MbmBvBy\"\r\n}  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/UserProfile",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"UserProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL0xvZ2luIiwiaWF0IjoxNjI1MjA1ODc0LCJleHAiOjE2MjUyMDk0NzQsIm5iZiI6MTYyNTIwNTg3NCwianRpIjoiTXpudjEzYnZBVmR3Z0Q1ayIsInN1YiI6MSwicHJ2IjoiZjY0ZDQ4YTZjZWM3YmRmYTdmYmY4OTk0NTRiNDg4YjNlNDYyNTIwYSJ9.8YLGwCIYLn764XR3f7fcaV1dHnWiibcMoOAYdhKQR5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/Logout",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RefreshToken for exsting token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL0xvZ2luIiwiaWF0IjoxNjI1MjA2NTY3LCJleHAiOjE2MjUyMTAxNjcsIm5iZiI6MTYyNTIwNjU2NywianRpIjoiT2d6Q2FsVnp2OUhXaGtCeSIsInN1YiI6MSwicHJ2IjoiZjY0ZDQ4YTZjZWM3YmRmYTdmYmY4OTk0NTRiNDg4YjNlNDYyNTIwYSJ9.uHxScSmI2qHSNdzDiZ0upjIaCYCXb0gHKvnyPVqz6BE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/RefreshToken",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"RefreshToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjUyMDk2MzU1LCJleHAiOjE2NTIwOTk5NTUsIm5iZiI6MTY1MjA5NjM1NSwianRpIjoiY1lqc0d4UGxRS2RPSG13ZiIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.KHI-RtKZFbN6LVoR5kd5X4dgs4X6srO3kOuJlFMsueo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"transaction_id\": \"20220509132215631655\",\r\n\t\"razorpay_payment_id\": \"pay_JT3MO4UrPGw9aQ\",\r\n\t\"razorpay_order_id\": \"order_JT3MJLjsb3Lj2K\",\r\n\t\"razorpay_signature\": \"04e6ca7c037d5f6bb8fefb8f87a20ae4f5461fabd2d86232a8656378dce8daf8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/PaymentStatus",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"PaymentStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "email ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"sssss\",\r\n    \"email\":\"sahu.swagatika@gmail.com\",\r\n    \"bookingdate\":\"02-05-2021\",\r\n    \"journeydate\":\"08-05-2021\",\r\n    \"boarding_point\":\"Bermunda\",\r\n    \"departureTime\":\"21:00\",\r\n    \"dropping_point\":\"Hirakud\",\r\n    \"arrivalTime\":\"06:30\",\r\n    \"seat_id\":[10,15],\r\n    \"busname\":\"Jagakalia\",\r\n    \"busNumber\":\"OD B 8657\",\r\n    \"bustype\":\"NON AC\",\r\n    \"busTypeName\":\"DELUX\",\r\n    \"sittingType\":\"2+2\",\r\n    \"conductorphone\":\"1212121212\",\r\n    \"passengerDetails\": [\r\n\t\t\t{\r\n\t\t\t\t\"passenger_name\": \"lima1\",\r\n\t\t\t\t\"passenger_gender\": \"F\",\r\n\t\t\t\t\"passenger_age\": \"22\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"passenger_name\": \"lima2\",\r\n\t\t\t\t\"passenger_gender\": \"F\",\r\n\t\t\t\t\"passenger_age\": \"28\"\r\n\r\n\t\t\t}\r\n\t   ],\r\n    \"totalfare\":\"850\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/SendEmailTicket",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"SendEmailTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SendSmsTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"phone\":\"9916457575\",\r\n    \"email\":\"\",\r\n    \"PNR\":\"OD12345\",\r\n    \"busname\":\"Jagakalia\",\r\n    \"busNumber\":\"OD8657\",\r\n    \"DOJ\":\"08-05-2021\",\r\n    \"routedetails\":\"Bhubaneswar-Sambalpur\",\r\n    \"departureTime\":\"8:00PM\",\r\n    \"totalfare\":\"800\",\r\n    \"seat_id\":[10,15],\r\n    \"conmob\":\"991765743\",\r\n    \"passengerDetails\": [\r\n\t\t\t{\r\n\t\t\t\t\"passenger_name\": \"Sandy\",\r\n\t\t\t\t\"passenger_gender\": \"M\"\r\n\t\t\t},\r\n\t\t\t{\r\n\t\t\t\t\"passenger_name\": \"swagatika\",\r\n\t\t\t\t\"passenger_gender\": \"F\"\r\n\t\t\t}\r\n\t   ]\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/SendSmsTicket",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"SendSmsTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bus_id\":\"8\",\r\n    \"source_id\":\"1345\",\r\n    \"destination_id\":\"1374\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/BusDetails?bus_id=1&source_id=82&destination_id=434",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"BusDetails"
+					],
+					"query": [
+						{
+							"key": "bus_id",
+							"value": "1"
+						},
+						{
+							"key": "source_id",
+							"value": "82"
+						},
+						{
+							"key": "destination_id",
+							"value": "434"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Popular routes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/PopularRoutes",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"PopularRoutes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Operators",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjUxNzQyMjUyLCJleHAiOjE2NTE3NDU4NTIsIm5iZiI6MTY1MTc0MjI1MiwianRpIjoiUmNab2JCZUZaOWhGVGhweSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.F5aIgK3HxKrQv00F1Wlt2ieHAUfDcYMf_dvsA15K1ik",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/TopOperators",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"TopOperators"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel Ticket",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU1ODgwNDc0LCJleHAiOjE2NTU4ODQwNzQsIm5iZiI6MTY1NTg4MDQ3NCwianRpIjoiOGVEQzBDSTRRVW9JUEdJcyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.v153m98lsCxmrej4ZmErSTaH3erpu9QI0BTfv7HvkVU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODW9117183\",\r\n    \"phone\":\"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/CancelTicket",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"CancelTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Routes info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/AllRoutes",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"AllRoutes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OperatotDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/OperatorDetails?operator_url=iconic-travels",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"OperatorDetails"
+					],
+					"query": [
+						{
+							"key": "operator_url",
+							"value": "iconic-travels"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AllOperators",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filter\": \"\",\r\n    \"paginate\": 400\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/AllOperators",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"AllOperators"
+					]
+				},
+				"description": "AllOperators"
+			},
+			"response": []
+		},
+		{
+			"name": "user reviews",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL1ZlcmlmeU90cCIsImlhdCI6MTYzMjczOTE5NywiZXhwIjoxNjMyNzQyNzk3LCJuYmYiOjE2MzI3MzkxOTcsImp0aSI6IkZvcmYyNGFXQ0xxYUtlOE8iLCJzdWIiOjEsInBydiI6ImY2NGQ0OGE2Y2VjN2JkZmE3ZmJmODk5NDU0YjQ4OGIzZTQ2MjUyMGEifQ.A5nxsM2p0qSpCUKAO4AvNgLB4pX4QXtlVO0xyL-qoPI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"userId\":\"1\",\r\n    \"token\":\"9LgTdlPLrZ\"\r\n}  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/UserReviews",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"UserReviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Offers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQ3NDk4MzI1LCJleHAiOjE2NDc1MDE5MjUsIm5iZiI6MTY0NzQ5ODMyNSwianRpIjoiYmNWNmJVd0JiNURlTjFSTyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.10Zx3Q31U9MRiD7IhMdcYghL6iNxmyKuvhlf4BCf8gM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/Offers",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"Offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "coupons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY0ODg4NTk4MywiZXhwIjoxNjQ4ODg5NTgzLCJuYmYiOjE2NDg4ODU5ODMsImp0aSI6IkJwWHdKS0FBWFplZGNSRnoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.P95VKxqJGWjBTvATsvtkI0cBBS3tJfiXECujtbBKgyY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"coupon_code\": \"ODTEST2\",\r\n    \"bus_id\": 1,\r\n    \"source_id\": \"82\",\r\n    \"destination_id\": \"323\",\r\n    \"journey_date\": \"2022-03-29\",\r\n    \"transaction_id\": \"20220402131923625674\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/Coupons",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"Coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local SERVER AUTH",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"client_id\": \"2fgsFCk8mmFJhm5ExneFbXMsTYjAE5NZ\",\r\n\t\"client_secret\": \"uOGvi4XQxoLC99WK-KRs7PwL5fPnBrIawZD8m9vHczMUUZjCra4U0_9ydG36YQjJ\",\r\n\t\"audience\": \"http://127.0.0.1:8000/api/\",\r\n\t\"grant_type\": \"client_credentials\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dev-seofied.us.auth0.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"dev-seofied",
+						"us",
+						"auth0",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Journey details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQ2NjQxNjEwLCJleHAiOjE2NDY2NDUyMTAsIm5iZiI6MTY0NjY0MTYxMCwianRpIjoiUkJlRTdFR1UzVGVvcEY3WCIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.5Z59ucxWcnKcKOvgVOaziXc99Bz_5OqAreugGcy0kVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\" : \"42971035\",\r\n    \"mobile\" : \"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/JourneyDetails",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"JourneyDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update userReview ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\": \"15432869\",\r\n    \"bus_id\": \"5\",\r\n    \"users_id\": \"2\",\r\n    \"reference_key\": \"lima@gmail.com\",\r\n    \"rating_overall\": \"5\",\r\n    \"rating_comfort\": \"5\",\r\n    \"rating_clean\": \"5\",\r\n    \"rating_behavior\": \"4\",\r\n    \"rating_timing\": \"2\",\r\n    \"comments\": \"Test comments\",\r\n    \"created_by\": \"Lima\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/UpdateReview/1",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"UpdateReview",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agent Booking Tickets",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"agentInfo\": {\r\n\t\t\"email\": \"\",\r\n\t\t\"phone\": \"7008559705\",\r\n\t\t\"name\": \"CHANDRA\"\r\n\t},\r\n\t\"customerInfo\": {\r\n\t\t\"email\": \"\",\r\n\t\t\"phone\": \"1212121212\",\r\n\t\t\"name\": \"ssssssss\"\r\n\t},\r\n\t\"bookingInfo\": {\r\n\t\t\"bus_id\": \"3\",\r\n\t\t\"source_id\": \"1345\",\r\n\t\t\"destination_id\": \"1374\",\r\n\t\t\"journey_dt\": \"2021-10-09\",\r\n\t\t\"boarding_point\": \"Bus stand\",\r\n\t\t\"dropping_point\": \"bus stand\",\r\n\t\t\"boarding_time\": \"20:00\",\r\n\t\t\"dropping_time\": \"06:00\",\r\n\t\t\"origin\": \"ODBUS\",\r\n\t\t\"app_type\": \"WEB\",\r\n\t\t\"typ_id\": \"1\",\r\n        \"total_fare\": 1100,\r\n\t\t\"owner_fare\": 1000,\r\n        \"odbus_service_Charges\": 70,\r\n\t\t\"created_by\": \"Agent\",\r\n\t\t\"bookingDetail\": [\r\n\t\t\t{\r\n\t\t\t\t\"bus_seats_id\": \"37\",\r\n\t\t\t\t\"passenger_name\": \"sony\",\r\n\t\t\t\t\"passenger_gender\": \"F\",\r\n\t\t\t\t\"passenger_age\": \"28\",\r\n\t\t\t\t\"created_by\": \"customer\"\r\n\t\t\t}\t\r\n\t   ]\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/AgentBooking",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"AgentBooking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentWallet payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjUxNzMwMTIxLCJleHAiOjE2NTE3MzM3MjEsIm5iZiI6MTY1MTczMDEyMSwianRpIjoiSVV0QnRMeHNMb3FkRFNQMSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.wGUZBdzRtlWtXHkxtLszOljjhjosMyRGSGK_3yqgAG0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"user_id\": 51,\r\n\t\"user_name\": \"M Mandal\",\r\n\t\"busId\": 798,\r\n\t\"sourceId\": \"144\",\r\n\t\"destinationId\": \"388\",\r\n\t\"applied_comission\": \"10\",\r\n\t\"transaction_id\": \"20220504145258498083\",\r\n\t\"seatIds\": [\"1861\"],\r\n\t\"entry_date\": \"05-05-2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AgentWalletPayment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AgentWalletPayment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentPaymentStatus",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY1OTQxOTUyMiwiZXhwIjoxNjU5NDIzMTIyLCJuYmYiOjE2NTk0MTk1MjIsImp0aSI6Inl5czhSd2ROTXBVd0g4YlUiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.VNkXBp5R1hoXCVPeTT9iR_kplCqI7TCCK_vfr6NAAVs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"transaction_id\": \"20220802104543407929\",\r\n\t\"customer_comission\": \"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/AgentPaymentStatus",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"AgentPaymentStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all Path urls",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AllPathUrls",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AllPathUrls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testing email api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sahu.swagatika@gmail.com\",\r\n    \"name\":\"swagatika\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/TestingEmail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"TestingEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQ2ODA5MDIyLCJleHAiOjE2NDY4MTI2MjIsIm5iZiI6MTY0NjgwOTAyMiwianRpIjoiZGVmMnJ0U3Z4TEMyUHlYVSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Pw4eV6LMB55IN7blSyoLuZn2oKjCnzK4Xl0p49zT3fk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"1\",\r\n     \"token\":\"E7CDunOAhI\",\r\n    \"name\": \"Lima Mohanty\",\r\n    \"email\": \"banashri.seofied@gmail.com\",\r\n    \"pincode\": \"756000\",\r\n    \"street\": \"Bhadrak\",\r\n    \"district\": \"Bhadrak\",\r\n    \"address\": \"Berhampur\",\r\n    \"profile_image\": \"sss1.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/updateProfile",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"updateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Recent Search",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"users_id\":1,\r\n    \"source\":\"bbsr\",\r\n    \"destination\":\"ctc\",\r\n    \"journey_date\":\"07-12-2021\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/RecentSearch",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"RecentSearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Search Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/RecentSearch/1",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"RecentSearch",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel ticket info",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"83547216\",\r\n    \"mobile\":\"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/cancelTicketInfo",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"cancelTicketInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get page contents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"page_url\":\"about-us\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/GetPageData",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"GetPageData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get seo lists",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/seolist?user_id=1",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"seolist"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Testimonials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/GetTestimonial",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"GetTestimonial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Common Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/CommonService",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"CommonService"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQ2NjQ5NTM3LCJleHAiOjE2NDY2NTMxMzcsIm5iZiI6MTY0NjY0OTUzNywianRpIjoieEZRMHhKUzZxM3B1dURiTyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.BE8fd5Dcq8Ecd8IKPQi369nmI8jkCOE-e_gdvmRHXA8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Lima Mohanty\",\r\n    \"email\":\"lima@gmail.com\",\r\n    \"phone\":\"8763447921\",\r\n    \"service\":\"Feedback\",\r\n    \"message\":\"Very Nice\",\r\n    \"user_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/saveContacts",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"saveContacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add review",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY0NjcxODkwNSwiZXhwIjoxNjQ2NzIyNTA1LCJuYmYiOjE2NDY3MTg5MDUsImp0aSI6Ik1IZFBUb1BLc3YxbjNaM2siLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7AMn0pCMFbmf1EDGUuyQrL07yZHEiVTuVT_NJHanxRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"pnr\": \"86295104\",\r\n\t\"bus_id\": 7,\r\n\t\"users_id\": 2,\r\n\t\"reference_key\": \"banashri.seofied1@gmail.com\",\r\n\t\"rating_overall\": 4,\r\n\t\"rating_comfort\": 4,\r\n\t\"rating_clean\": 5,\r\n\t\"rating_behavior\": 5,\r\n\t\"rating_timing\": 5,\r\n\t\"comments\": \"test\",\r\n    \"title\": \"test title\",\r\n\t\"created_by\": \"Lima Mohanty\",\r\n    \"user_id\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/AddReview",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"AddReview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateReview",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\": \"86295104\",\r\n    \"bus_id\":7,\r\n    \"users_id\": 2,\r\n    \"reference_key\": \"test222@gmail.com\",\r\n    \"rating_overall\": \"5\",\r\n    \"rating_comfort\": \"5\",\r\n    \"rating_clean\": \"5\",\r\n    \"rating_behavior\": \"4\",\r\n    \"rating_timing\": \"2\",\r\n    \"comments\": \"Test comments\",\r\n    \"title\": \"Test comments\",\r\n    \"created_by\": \"Lima\",\r\n    \"user_id\":1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/UpdateReview/16",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"UpdateReview",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteReview",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQ2NzIyNDA1LCJleHAiOjE2NDY3MjYwMDUsIm5iZiI6MTY0NjcyMjQwNSwianRpIjoiMG1VOERFRkNLWDBaQXB6ZSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.gajYLxIx9iR-zP-1x9SvwiBvmV1igrBfmyRForIaK3w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/DeleteReview/8/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"DeleteReview",
+						"8",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/OperatorDetails?operator_url=gpm-travels",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"OperatorDetails"
+					],
+					"query": [
+						{
+							"key": "operator_url",
+							"value": "gpm-travels"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQzMjcwMzk0LCJleHAiOjE2NDMyNzM5OTQsIm5iZiI6MTY0MzI3MDM5NCwianRpIjoib3UwaUdZUUhmdmZOcU8zNSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.6V8QSvSZwKgpdNf_DapsthKA0Z6XbZmxFfGVELzexEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ClientDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ClientDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking Histroy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"Completed\",\r\n    \"paginate\":5,\r\n    \"userId\":1,\r\n    \"token\":\"r34azDRURM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/BookingHistory?page=",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"BookingHistory"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentcancelTicketOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"94125673\",\r\n    \"mobile\":\"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AgentcancelTicketOTP",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AgentcancelTicketOTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgentcancelTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"94125673\",\r\n    \"mobile\":\"9916457575\",\r\n    \"otp\":\"61877\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AgentcancelTicket",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AgentcancelTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookingDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU3MDg4MDMwLCJleHAiOjE2NTcwOTE2MzAsIm5iZiI6MTY1NzA4ODAzMCwianRpIjoiV3F1aXRwaUprTGRFUnl4TSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.S2Rc9RkF9mclDCVahvMtFADv_e4RrWsJr2mCGP-7q9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\" : \"09378142\",\r\n    \"mobile\" : \"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/BookingDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"BookingDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resend tickect to email/sms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjQ2NjQxNjEwLCJleHAiOjE2NDY2NDUyMTAsIm5iZiI6MTY0NjY0MTYxMCwianRpIjoiUkJlRTdFR1UzVGVvcEY3WCIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.5Z59ucxWcnKcKOvgVOaziXc99Bz_5OqAreugGcy0kVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\" : \"30257496\",\r\n    \"mobile\" : \"7978817539\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/EmailSms",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"EmailSms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filter Options",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY0NjY1MTIxMywiZXhwIjoxNjQ2NjU0ODEzLCJuYmYiOjE2NDY2NTEyMTMsImp0aSI6IjZrZzcwakhpQVdnR2dYOUkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mV5zm34WDSnfG5uz4b_X2JW7UHlFFW7-g5ZzYjuIxZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/FilterOptions?sourceID=82&destinationID=434&busIDs[]=483&busIDs[]=508",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"FilterOptions"
+					],
+					"query": [
+						{
+							"key": "sourceID",
+							"value": "82"
+						},
+						{
+							"key": "destinationID",
+							"value": "434"
+						},
+						{
+							"key": "busIDs[]",
+							"value": "483"
+						},
+						{
+							"key": "busIDs[]",
+							"value": "508"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save recent Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY0NjcxODkwNSwiZXhwIjoxNjQ2NzIyNTA1LCJuYmYiOjE2NDY3MTg5MDUsImp0aSI6Ik1IZFBUb1BLc3YxbjNaM2siLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7AMn0pCMFbmf1EDGUuyQrL07yZHEiVTuVT_NJHanxRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"users_id\":1,\r\n    \"source\":\"bbsr\",\r\n    \"destination\":\"ctc\",\r\n    \"journey_date\":\"07-12-2021\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/RecentSearch",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"RecentSearch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get search details of a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY0NjcxODkwNSwiZXhwIjoxNjQ2NzIyNTA1LCJuYmYiOjE2NDY3MTg5MDUsImp0aSI6Ik1IZFBUb1BLc3YxbjNaM2siLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7AMn0pCMFbmf1EDGUuyQrL07yZHEiVTuVT_NJHanxRI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/RecentSearch/1",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"RecentSearch",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PassengerInfoOnBooking(client booking flow)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5OTM2MDUzLCJleHAiOjE2NTk5Mzk2NTMsIm5iZiI6MTY1OTkzNjA1MywianRpIjoiMmMwZ0plR2dlOG02YkRiNiIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mYvwnf4sJR03-3FyBX0MWTzDBixVt0kv0R-CpuSSwzo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"customerInfo\": {\r\n\t\t\"email\" :\"\",\r\n\t\t\"phone\": \"1234567898\",\r\n\t\t\"name\": \"nancy\"\r\n\t},\r\n\t\"bookingInfo\": {\r\n\t\t\"bus_id\": \"592\",\r\n\t\t\"source_id\": \"82\",\r\n\t\t\"destination_id\": \"53\",\r\n\t\t\"journey_dt\": \"2022-08-10\",\r\n\t\t\"boarding_point\": \"Bermunda\",\r\n\t\t\"dropping_point\": \"sector\",\r\n\t\t\"boarding_time\": \"21:20\",\r\n\t\t\"dropping_time\": \"00:06\",\r\n\t\t\"bookingDetail\": [\r\n\t\t\t{\r\n\t\t\t\t\"bus_seats_id\": \"2976\",\r\n\t\t\t\t\"passenger_name\": \"nancy\",\r\n\t\t\t\t\"passenger_gender\": \"M\",\r\n\t\t\t\t\"passenger_age\": \"33\"\r\n\t\t\t},\r\n            {\r\n\t\t\t\t\"bus_seats_id\": \"2978\",\r\n\t\t\t\t\"passenger_name\": \"nancy1\",\r\n\t\t\t\t\"passenger_gender\": \"M\",\r\n\t\t\t\t\"passenger_age\": \"33\"\r\n\t\t\t}\t\r\n\t   ]\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/PassengerInfo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"PassengerInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Seat Block(client api)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5OTM2MDUzLCJleHAiOjE2NTk5Mzk2NTMsIm5iZiI6MTY1OTkzNjA1MywianRpIjoiMmMwZ0plR2dlOG02YkRiNiIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mYvwnf4sJR03-3FyBX0MWTzDBixVt0kv0R-CpuSSwzo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"transaction_id\": \"20220808105415963623\",\r\n    \"customer_gst_status\": false,\r\n\t\"customer_gst_number\": null,\r\n\t\"customer_gst_business_name\": null,\r\n\t\"customer_gst_business_email\": null,\r\n\t\"customer_gst_business_address\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/SeatBlock",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"SeatBlock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ticket Confirmation (client api)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5OTM2MDUzLCJleHAiOjE2NTk5Mzk2NTMsIm5iZiI6MTY1OTkzNjA1MywianRpIjoiMmMwZ0plR2dlOG02YkRiNiIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mYvwnf4sJR03-3FyBX0MWTzDBixVt0kv0R-CpuSSwzo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"transaction_id\": \"20220808105415963623\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/TicketConfirmation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"TicketConfirmation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client cancel ticket(admin use)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL58720\",\r\n    \"user_id\":\"210\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/ClientCancelTicket",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"ClientCancelTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Client Cancel TicketInfo api(admin use)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL91478\",\r\n    \"user_id\":\"210\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/ClientCancelTicketInfo",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"ClientCancelTicketInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "App Version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Appversion",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Appversion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel ticket info to show customer in client panel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5OTM5ODcxLCJleHAiOjE2NTk5NDM0NzEsIm5iZiI6MTY1OTkzOTg3MSwianRpIjoiOWZmQ0xCYktSZWxldkNQZCIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BqNCE_7No3Bu6k9aIpBobUFN4F2eeDffqOmMf9j7UFM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL65057\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ClientCancelTicketinfo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ClientCancelTicketinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientTicketCancellation api(client use)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU5OTQ3NTU4LCJleHAiOjE2NTk5NTExNTgsIm5iZiI6MTY1OTk0NzU1OCwianRpIjoiUnd6UXphamlXMGdlMjVnNSIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Q1FzNOUpb5BX47auYlqczTzxcKOLJCT5gfT7jjUp9kU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL65057\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ClientTicketCancellation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ClientTicketCancellation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send push notification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU2NDk3OTkyLCJleHAiOjE2NTY1MDE1OTIsIm5iZiI6MTY1NjQ5Nzk5MiwianRpIjoiSVk2OHY1NDFFdVd0SmJUYiIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.1kXjLoLYrBp3x0BCWwqv2LlQl7RbJG8MrYDrOpzXbG8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userIds\":[8,45],\r\n\t\"notification\": {\r\n\t\t\"title\": \"ALT App Testing\",\r\n\t\t\"body\": \"First Notification\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/SendNotification",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"SendNotification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TicketDetails(client use)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU3MDkxNjIzLCJleHAiOjE2NTcwOTUyMjMsIm5iZiI6MTY1NzA5MTYyMywianRpIjoiZTFuSHNDVWRETGV6OVllMCIsInN1YiI6MjA1LCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.XwU-Esh-RndEJqsAowvoXskHGOxOpmQ4tOFTqsLXf6E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\" : \"09378142\",\r\n    \"mobile\" : \"9916457575\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/TicketDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"TicketDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get FilterOptions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjU4MjMxMTI5LCJleHAiOjE2NTgyMzQ3MjksIm5iZiI6MTY1ODIzMTEyOSwianRpIjoiYnpNeThrbThUbmlBRmMzciIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.CnYNOFRlq2beRDljozbPmHeqSwAiAfhsz0HTe1leHps",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceID\":\"82\",\r\n    \"destinationID\":\"53\",\r\n    \"busIDs\":[254,251,258]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/FilterOptions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"FilterOptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Homepage(merge all apis)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2NvbnN1bWVyLm9kYnVzLmNvLmluL2FwaS9DbGllbnRMb2dpbiIsImlhdCI6MTY2MDcyMDU5MiwiZXhwIjoxNjYwNzI0MTkyLCJuYmYiOjE2NjA3MjA1OTIsImp0aSI6IlFmOU9HdWdoZ1lZclB2M1MiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.uXNtfI35pRSbJxrkComVqNByJanYUSIVyEOWzNZKVdY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"locationName\": \"bhu\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://consumer.odbus.co.in/api/PopularInfo",
+					"protocol": "https",
+					"host": [
+						"consumer",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"PopularInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resendotp(android use)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjYxMjM1OTQ0LCJleHAiOjE2NjEyMzk1NDQsIm5iZiI6MTY2MTIzNTk0NCwianRpIjoiV0htSFllbTdaM2JpcWlkOSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.MwdpjunbJLu-gfRt-U2Ebhtc2Xcxup11xevbgveQbTE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isMobile\":\"true\",\r\n    \"source\":\"abcd@gmail.com\",\r\n    \"isLogin\":\"true\"\r\n}  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ResendOTP",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ResendOTP"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

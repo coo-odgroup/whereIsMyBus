@@ -1,0 +1,635 @@
+{
+	"info": {
+		"_postman_id": "943e2e9f-f07b-4b39-b3f8-3c6100c190bc",
+		"name": "Client APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12959037"
+	},
+	"item": [
+		{
+			"name": "ClientLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_id\":\"\", \r\n    \"password\":\"\" \r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/ClientLogin",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"ClientLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLocation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"locationName\":\"Bhubaneswar\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/getLocation",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"getLocation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/Listing?source=Bhubaneswar&destination=baripada&entry_date=25-12-2022",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"Listing"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "Bhubaneswar"
+						},
+						{
+							"key": "destination",
+							"value": "baripada"
+						},
+						{
+							"key": "entry_date",
+							"value": "25-12-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\":\"0\", \r\n    \"sourceID\":\"82\", \r\n    \"destinationID\":\"32\", \r\n    \"entry_date\":\"29-08-2022\"\r\n\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/Filter",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"Filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilterOptions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceID\":\"82\",\r\n    \"destinationID\":\"32\",\r\n    \"busIDs\":[416,420,258]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/FilterOptions",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"FilterOptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewSeats",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"entry_date\":\"01-10-2022\", \r\n    \"busId\":\"916\", \r\n    \"sourceId\":\"76\", \r\n    \"destinationId\":\"193\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/viewSeats",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"viewSeats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PriceOnSeatsSelection",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"busId\":\"1\", \r\n    \"sourceId\":\"82\", \r\n    \"destinationId\":\"434\",\r\n    \"seater\": [2694],\r\n    \"sleeper\": [2755],\r\n    \"entry_date\":\"15-01-2022\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/PriceOnSeatsSelection",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"PriceOnSeatsSelection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BoardingDroppingPoints",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzYwNTQ1LCJleHAiOjE2NjY3NjQxNDUsIm5iZiI6MTY2Njc2MDU0NSwianRpIjoiU1JKWmdsVHFGTVpXWVo5ZyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jLAK3YXEJ32iF3tnijJs_RdslPSFXQhp4WLbM72me6M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"busId\":\"1\", \r\n    \"sourceId\":\"82\", \r\n    \"destinationId\":\"434\",\r\n    \"Journey_date\":\"25-11-2022\",\r\n    \"origin\":\"ODBUS\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/BoardingDroppingPoints",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"BoardingDroppingPoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PassengerInfo(ODBUS)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY0MjQxLCJleHAiOjE2NjY3Njc4NDEsIm5iZiI6MTY2Njc2NDI0MSwianRpIjoiWnE3UE5XamhNRXRYS1BNOSIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.neL6vEim40nI4Im-WZRnAMck0V_OuSM-hgceGlUDuM0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerInfo\": {\r\n        \"email\": null,\r\n        \"phone\": \"9999999999\",\r\n        \"name\": \"ALEXA\"\r\n    },\r\n    \"bookingInfo\": {\r\n        \"coupon_code\": \"\",\r\n        \"bus_id\": 915,\r\n        \"source_id\": \"82\",\r\n        \"destination_id\": \"144\",\r\n        \"journey_dt\": \"2022-10-29\",\r\n        \"boarding_point\": \"Baramunda | 21:00\",\r\n        \"dropping_point\": \"Badambari Bus Stand | 22:00\",\r\n        \"boarding_time\": \"21:00\",\r\n        \"dropping_time\": \"22:00\",\r\n        \"CompanyID\": \"\",\r\n        \"PickupID\": 121,\r\n        \"DropID\": 291,\r\n        \"origin\": \"ODBUS\",\r\n        \"ReferenceNumber\": \"\",\r\n        \"RouteTimeID\": \"\",\r\n        \"bookingDetail\": [\r\n            {\r\n                \"bus_seats_id\": \"1885\",\r\n                \"passenger_name\": \"danny\",\r\n                \"passenger_gender\": \"M\",\r\n                \"passenger_age\": 33,\r\n                \"created_by\": \"Customer\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/PassengerInfo",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"PassengerInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PassengerInfo(DOLPHIN)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY0MjQxLCJleHAiOjE2NjY3Njc4NDEsIm5iZiI6MTY2Njc2NDI0MSwianRpIjoiWnE3UE5XamhNRXRYS1BNOSIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.neL6vEim40nI4Im-WZRnAMck0V_OuSM-hgceGlUDuM0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerInfo\": {\r\n        \"email\": \"abcd@gmail.com\",\r\n        \"phone\": \"1111111111\",\r\n        \"name\": \"Alexa\"\r\n    },\r\n    \"bookingInfo\": {\r\n        \"bus_id\": 23063,\r\n        \"source_id\": \"82\",\r\n        \"destination_id\": \"290\",\r\n        \"journey_dt\": \"2022-10-30\",\r\n        \"boarding_point\": \"Palasuni  Near Rasulgarh | 20:15\",\r\n        \"dropping_point\": \"Babughat - Back Side of Eden Garden-PARADEEP | 06:30\",\r\n        \"boarding_time\": \"19:25\",\r\n        \"dropping_time\": \"06:30\",\r\n        \"CompanyID\": 251,\r\n        \"PickupID\": \"25794\",\r\n        \"DropID\": \"25805\",\r\n        \"origin\": \"DOLPHIN\",\r\n        \"ReferenceNumber\": \"251#1689#1211#23063#59655#3189#30102022#6:00 PM#7:25 PM\",\r\n        \"RouteTimeID\": 59655,\r\n        \"bookingDetail\": [\r\n            {\r\n                \"bus_seats_id\": \"37\",\r\n                \"passenger_name\": \"lima\",\r\n                \"passenger_gender\": \"F\",\r\n                \"passenger_age\": \"30\",\r\n                \"created_by\": \"Customer\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/PassengerInfo",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"PassengerInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SeatBlock",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY2MjY2LCJleHAiOjE2NjY3Njk4NjYsIm5iZiI6MTY2Njc2NjI2NiwianRpIjoiWk9PWXpCdUdnSmhLZTJNUyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OHH00NQgs0Os-kHQjJugUMQR9ELzY1HRDGFoSNQ8yxo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"transaction_id\": \"20221026113950223347\",\r\n    \"customer_gst_status\": false,\r\n\t\"customer_gst_number\": null,\r\n\t\"customer_gst_business_name\": null,\r\n\t\"customer_gst_business_email\": null,\r\n\t\"customer_gst_business_address\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/SeatBlock",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"SeatBlock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TicketConfirmation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY2MjY2LCJleHAiOjE2NjY3Njk4NjYsIm5iZiI6MTY2Njc2NjI2NiwianRpIjoiWk9PWXpCdUdnSmhLZTJNUyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OHH00NQgs0Os-kHQjJugUMQR9ELzY1HRDGFoSNQ8yxo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"transaction_id\": \"20221026113950223347\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/TicketConfirmation",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"TicketConfirmation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientCancelTicketinfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY2MjY2LCJleHAiOjE2NjY3Njk4NjYsIm5iZiI6MTY2Njc2NjI2NiwianRpIjoiWk9PWXpCdUdnSmhLZTJNUyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OHH00NQgs0Os-kHQjJugUMQR9ELzY1HRDGFoSNQ8yxo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL49197\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/ClientCancelTicketinfo",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"ClientCancelTicketinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClientTicketCancellation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY2MjY2LCJleHAiOjE2NjY3Njk4NjYsIm5iZiI6MTY2Njc2NjI2NiwianRpIjoiWk9PWXpCdUdnSmhLZTJNUyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OHH00NQgs0Os-kHQjJugUMQR9ELzY1HRDGFoSNQ8yxo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL49197\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/ClientTicketCancellation",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"ClientTicketCancellation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TicketDetails",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3Rlc3Rpbmcub2RidXMuY28uaW4vYXBpL0NsaWVudExvZ2luIiwiaWF0IjoxNjY2NzY2MjY2LCJleHAiOjE2NjY3Njk4NjYsIm5iZiI6MTY2Njc2NjI2NiwianRpIjoiWk9PWXpCdUdnSmhLZTJNUyIsInN1YiI6MjEwLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.OHH00NQgs0Os-kHQjJugUMQR9ELzY1HRDGFoSNQ8yxo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pnr\":\"ODCL49197\",\r\n    \"mobile\":\"9999999999\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testing.odbus.co.in/api/TicketDetails",
+					"protocol": "https",
+					"host": [
+						"testing",
+						"odbus",
+						"co",
+						"in"
+					],
+					"path": [
+						"api",
+						"TicketDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

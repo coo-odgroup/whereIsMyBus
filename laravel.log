@@ -1,0 +1,923 @@
+[2024-04-20 12:25:21] local.INFO: line 1035  
+[2024-04-20 12:25:21] local.INFO: array (
+  'source' => 'Bhubaneswar',
+  'destination' => 'Cuttack',
+  'bookingDetails' => 
+  Illuminate\Database\Eloquent\Collection::__set_state(array(
+     'items' => 
+    array (
+      0 => 
+      App\Models\Booking::__set_state(array(
+         'table' => 'booking',
+         'fillable' => 
+        array (
+          0 => 'transaction_id',
+          1 => 'pnr',
+          2 => 'users_id',
+          3 => 'bus_id',
+          4 => 'source_id',
+          5 => 'destination_id',
+          6 => 'j_day',
+          7 => 'journey_dt',
+          8 => 'boarding_point',
+          9 => 'dropping_point',
+          10 => 'boarding_time',
+          11 => 'dropping_time',
+          12 => 'origin',
+          13 => 'app_type',
+          14 => 'typ_id',
+          15 => 'total_fare',
+          16 => 'owner_fare',
+          17 => 'odbus_Charges',
+          18 => 'odbus_gst_charges',
+          19 => 'odbus_gst_amount',
+          20 => 'owner_gst_charges',
+          21 => 'owner_gst_amount',
+          22 => 'created_by',
+        ),
+         'connection' => 'mysql',
+         'primaryKey' => 'id',
+         'keyType' => 'int',
+         'incrementing' => true,
+         'with' => 
+        array (
+        ),
+         'withCount' => 
+        array (
+        ),
+         'preventsLazyLoading' => false,
+         'perPage' => 15,
+         'exists' => true,
+         'wasRecentlyCreated' => false,
+         'escapeWhenCastingToString' => false,
+         'attributes' => 
+        array (
+          'id' => 14301,
+          'pnr' => 'ODCL50542',
+          'users_id' => 27,
+          'user_id' => 205,
+          'bus_id' => 857,
+          'source_id' => 82,
+          'destination_id' => 144,
+          'client_comission' => 0.96,
+          'journey_dt' => '2024-04-26',
+          'boarding_point' => 'Baramunda | 21:00',
+          'dropping_point' => 'Badambari Bus Stand | 22:00',
+          'boarding_time' => '21:00:00',
+          'dropping_time' => '22:00:00',
+          'total_fare' => 12.1,
+          'client_gst' => 0.0,
+        ),
+         'original' => 
+        array (
+          'id' => 14301,
+          'pnr' => 'ODCL50542',
+          'users_id' => 27,
+          'user_id' => 205,
+          'bus_id' => 857,
+          'source_id' => 82,
+          'destination_id' => 144,
+          'client_comission' => 0.96,
+          'journey_dt' => '2024-04-26',
+          'boarding_point' => 'Baramunda | 21:00',
+          'dropping_point' => 'Badambari Bus Stand | 22:00',
+          'boarding_time' => '21:00:00',
+          'dropping_time' => '22:00:00',
+          'total_fare' => 12.1,
+          'client_gst' => 0.0,
+        ),
+         'changes' => 
+        array (
+        ),
+         'casts' => 
+        array (
+        ),
+         'classCastCache' => 
+        array (
+        ),
+         'attributeCastCache' => 
+        array (
+        ),
+         'dates' => 
+        array (
+        ),
+         'dateFormat' => NULL,
+         'appends' => 
+        array (
+        ),
+         'dispatchesEvents' => 
+        array (
+        ),
+         'observables' => 
+        array (
+        ),
+         'relations' => 
+        array (
+          'users' => 
+          App\Models\Users::__set_state(array(
+             'table' => 'users',
+             'fillable' => 
+            array (
+              0 => 'name',
+              1 => 'email',
+              2 => 'phone',
+              3 => 'password',
+              4 => 'created_by',
+            ),
+             'hidden' => 
+            array (
+              0 => 'password',
+              1 => 'remember_token',
+            ),
+             'casts' => 
+            array (
+              'email_verified_at' => 'datetime',
+            ),
+             'connection' => 'mysql',
+             'primaryKey' => 'id',
+             'keyType' => 'int',
+             'incrementing' => true,
+             'with' => 
+            array (
+            ),
+             'withCount' => 
+            array (
+            ),
+             'preventsLazyLoading' => false,
+             'perPage' => 15,
+             'exists' => true,
+             'wasRecentlyCreated' => false,
+             'escapeWhenCastingToString' => false,
+             'attributes' => 
+            array (
+              'id' => 27,
+              'name' => 'lima',
+              'email' => 'mohantylima71@gmail.com',
+              'phone' => '8763447921',
+            ),
+             'original' => 
+            array (
+              'id' => 27,
+              'name' => 'lima',
+              'email' => 'mohantylima71@gmail.com',
+              'phone' => '8763447921',
+            ),
+             'changes' => 
+            array (
+            ),
+             'classCastCache' => 
+            array (
+            ),
+             'attributeCastCache' => 
+            array (
+            ),
+             'dates' => 
+            array (
+            ),
+             'dateFormat' => NULL,
+             'appends' => 
+            array (
+            ),
+             'dispatchesEvents' => 
+            array (
+            ),
+             'observables' => 
+            array (
+            ),
+             'relations' => 
+            array (
+            ),
+             'touches' => 
+            array (
+            ),
+             'timestamps' => true,
+             'visible' => 
+            array (
+            ),
+             'guarded' => 
+            array (
+              0 => '*',
+            ),
+             'rememberTokenName' => 'remember_token',
+          )),
+          'bus' => 
+          App\Models\Bus::__set_state(array(
+             'table' => 'bus',
+             'fillable' => 
+            array (
+              0 => 'bus_operator_id',
+              1 => 'user_id',
+              2 => 'name',
+              3 => 'via',
+              4 => 'bus_number',
+              5 => 'bus_description',
+              6 => 'bus_type_id',
+              7 => 'bus_sitting_id',
+              8 => 'amenities_id',
+              9 => 'cancellationslabs_id',
+              10 => 'bus_seat_layout_id',
+              11 => 'running_cycle',
+              12 => 'popularity',
+              13 => 'admin_notes',
+              14 => 'has_return_bus',
+              15 => 'return_bus_id',
+              16 => 'cancelation_points',
+              17 => 'created_by',
+            ),
+             'connection' => 'mysql',
+             'primaryKey' => 'id',
+             'keyType' => 'int',
+             'incrementing' => true,
+             'with' => 
+            array (
+            ),
+             'withCount' => 
+            array (
+            ),
+             'preventsLazyLoading' => false,
+             'perPage' => 15,
+             'exists' => true,
+             'wasRecentlyCreated' => false,
+             'escapeWhenCastingToString' => false,
+             'attributes' => 
+            array (
+              'id' => 857,
+              'name' => 'TEST BUS',
+              'bus_number' => 'OD 05 T 1111',
+              'bus_type_id' => 9,
+              'bus_sitting_id' => 12,
+              'cancellationslabs_id' => 7,
+            ),
+             'original' => 
+            array (
+              'id' => 857,
+              'name' => 'TEST BUS',
+              'bus_number' => 'OD 05 T 1111',
+              'bus_type_id' => 9,
+              'bus_sitting_id' => 12,
+              'cancellationslabs_id' => 7,
+            ),
+             'changes' => 
+            array (
+            ),
+             'casts' => 
+            array (
+            ),
+             'classCastCache' => 
+            array (
+            ),
+             'attributeCastCache' => 
+            array (
+            ),
+             'dates' => 
+            array (
+            ),
+             'dateFormat' => NULL,
+             'appends' => 
+            array (
+            ),
+             'dispatchesEvents' => 
+            array (
+            ),
+             'observables' => 
+            array (
+            ),
+             'relations' => 
+            array (
+              'cancellationslabs' => 
+              App\Models\CancellationSlab::__set_state(array(
+                 'table' => 'cancellationslabs',
+                 'fillable' => 
+                array (
+                  0 => 'api_id',
+                  1 => 'rule_name',
+                  2 => 'status',
+                ),
+                 'connection' => 'mysql',
+                 'primaryKey' => 'id',
+                 'keyType' => 'int',
+                 'incrementing' => true,
+                 'with' => 
+                array (
+                ),
+                 'withCount' => 
+                array (
+                ),
+                 'preventsLazyLoading' => false,
+                 'perPage' => 15,
+                 'exists' => true,
+                 'wasRecentlyCreated' => false,
+                 'escapeWhenCastingToString' => false,
+                 'attributes' => 
+                array (
+                  'id' => 7,
+                  'rule_name' => 'ODBUS CANCELLATION SLAB',
+                  'cancellation_policy_desc' => '<p class="MsoNormal"><b><span lang="EN-US">CANCELLATION POLICY</span></b><span lang="EN-US"></span></p><p class="MsoNormal"><span lang="EN-US">The tickets booked through ODBUS Can be cancelled and note that&#10;Cancel Can be possible before 12 hours of the departure of the said bus. </span></p><p class="MsoNormal"><span lang="EN-US">1. Partial&#10;cancellation not allowed in ODBUS.</span></p><p class="MsoNormal"><span lang="EN-US">2. In respect of&#10;refunds due to cancellation of service by Operator , passenger is required to&#10;send an e-mail to <a href="mailto:support@odbus.in">support@odbus.in</a> mentioning&#10;PNR of the ticket. We will verify and refund the amount to the concerned Credit&#10;card / Internet banking / UPI.</span></p><p class="MsoNormal"><span lang="EN-US">3. Refunds for&#10;Ticket cancellations / Failed Transactions to passengers will be given normally&#10;in 10 - 12 Bank working days by ODBUS, after the cancellation of ticket or receipt&#10;of e-mail. If refunds are delayed, passengers may contact ODBUS Executive at&#10;9583918888 ( 09:00 AM to 07:00 PM )</span></p><p class="MsoNormal"><span lang="EN-US">4. Customer can\'t&#10;claim any cancellation refund on rescheduled tickets.</span></p><p class="MsoNormal"><span lang="EN-US">5. The cancellation&#10;terms are different for each Operator which is set by Bus Owners itself. These&#10;terms are shown while booking as well as on the ticket printout/Email&#10;confirmation.</span></p><p class="MsoNormal"><span lang="EN-US">6. Tickets booked&#10;through online should be cancelled only through online.</span></p><p class="MsoNormal"><span lang="EN-US">7. Transaction Fee /&#10;GST are non-refundable for Ticket Cancellation / Service Cancellation.</span></p><p class="MsoNormal">&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;</p><p class="MsoNormal"><span lang="EN-US">8. Cancellation&#10;charges are applicable on Base fare not on the discounted.</span></p><ol start="1" type="1">&#10;</ol><ol start="1" type="1">&#10;</ol>',
+                ),
+                 'original' => 
+                array (
+                  'id' => 7,
+                  'rule_name' => 'ODBUS CANCELLATION SLAB',
+                  'cancellation_policy_desc' => '<p class="MsoNormal"><b><span lang="EN-US">CANCELLATION POLICY</span></b><span lang="EN-US"></span></p><p class="MsoNormal"><span lang="EN-US">The tickets booked through ODBUS Can be cancelled and note that&#10;Cancel Can be possible before 12 hours of the departure of the said bus. </span></p><p class="MsoNormal"><span lang="EN-US">1. Partial&#10;cancellation not allowed in ODBUS.</span></p><p class="MsoNormal"><span lang="EN-US">2. In respect of&#10;refunds due to cancellation of service by Operator , passenger is required to&#10;send an e-mail to <a href="mailto:support@odbus.in">support@odbus.in</a> mentioning&#10;PNR of the ticket. We will verify and refund the amount to the concerned Credit&#10;card / Internet banking / UPI.</span></p><p class="MsoNormal"><span lang="EN-US">3. Refunds for&#10;Ticket cancellations / Failed Transactions to passengers will be given normally&#10;in 10 - 12 Bank working days by ODBUS, after the cancellation of ticket or receipt&#10;of e-mail. If refunds are delayed, passengers may contact ODBUS Executive at&#10;9583918888 ( 09:00 AM to 07:00 PM )</span></p><p class="MsoNormal"><span lang="EN-US">4. Customer can\'t&#10;claim any cancellation refund on rescheduled tickets.</span></p><p class="MsoNormal"><span lang="EN-US">5. The cancellation&#10;terms are different for each Operator which is set by Bus Owners itself. These&#10;terms are shown while booking as well as on the ticket printout/Email&#10;confirmation.</span></p><p class="MsoNormal"><span lang="EN-US">6. Tickets booked&#10;through online should be cancelled only through online.</span></p><p class="MsoNormal"><span lang="EN-US">7. Transaction Fee /&#10;GST are non-refundable for Ticket Cancellation / Service Cancellation.</span></p><p class="MsoNormal">&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;</p><p class="MsoNormal"><span lang="EN-US">8. Cancellation&#10;charges are applicable on Base fare not on the discounted.</span></p><ol start="1" type="1">&#10;</ol><ol start="1" type="1">&#10;</ol>',
+                ),
+                 'changes' => 
+                array (
+                ),
+                 'casts' => 
+                array (
+                ),
+                 'classCastCache' => 
+                array (
+                ),
+                 'attributeCastCache' => 
+                array (
+                ),
+                 'dates' => 
+                array (
+                ),
+                 'dateFormat' => NULL,
+                 'appends' => 
+                array (
+                ),
+                 'dispatchesEvents' => 
+                array (
+                ),
+                 'observables' => 
+                array (
+                ),
+                 'relations' => 
+                array (
+                  'cancellationSlabInfo' => 
+                  Illuminate\Database\Eloquent\Collection::__set_state(array(
+                     'items' => 
+                    array (
+                      0 => 
+                      App\Models\CancellationSlabInfo::__set_state(array(
+                         'table' => 'cancellationslabs_info',
+                         'fillable' => 
+                        array (
+                          0 => 'cancellation_slab_id ',
+                          1 => 'duration',
+                          2 => 'deduction',
+                          3 => 'status',
+                          4 => 'created_by',
+                        ),
+                         'connection' => 'mysql',
+                         'primaryKey' => 'id',
+                         'keyType' => 'int',
+                         'incrementing' => true,
+                         'with' => 
+                        array (
+                        ),
+                         'withCount' => 
+                        array (
+                        ),
+                         'preventsLazyLoading' => false,
+                         'perPage' => 15,
+                         'exists' => true,
+                         'wasRecentlyCreated' => false,
+                         'escapeWhenCastingToString' => false,
+                         'attributes' => 
+                        array (
+                          'cancellation_slab_id' => 7,
+                          'duration' => '12-18',
+                          'deduction' => '35',
+                        ),
+                         'original' => 
+                        array (
+                          'cancellation_slab_id' => 7,
+                          'duration' => '12-18',
+                          'deduction' => '35',
+                        ),
+                         'changes' => 
+                        array (
+                        ),
+                         'casts' => 
+                        array (
+                        ),
+                         'classCastCache' => 
+                        array (
+                        ),
+                         'attributeCastCache' => 
+                        array (
+                        ),
+                         'dates' => 
+                        array (
+                        ),
+                         'dateFormat' => NULL,
+                         'appends' => 
+                        array (
+                        ),
+                         'dispatchesEvents' => 
+                        array (
+                        ),
+                         'observables' => 
+                        array (
+                        ),
+                         'relations' => 
+                        array (
+                        ),
+                         'touches' => 
+                        array (
+                        ),
+                         'timestamps' => true,
+                         'hidden' => 
+                        array (
+                        ),
+                         'visible' => 
+                        array (
+                        ),
+                         'guarded' => 
+                        array (
+                          0 => '*',
+                        ),
+                      )),
+                      1 => 
+                      App\Models\CancellationSlabInfo::__set_state(array(
+                         'table' => 'cancellationslabs_info',
+                         'fillable' => 
+                        array (
+                          0 => 'cancellation_slab_id ',
+                          1 => 'duration',
+                          2 => 'deduction',
+                          3 => 'status',
+                          4 => 'created_by',
+                        ),
+                         'connection' => 'mysql',
+                         'primaryKey' => 'id',
+                         'keyType' => 'int',
+                         'incrementing' => true,
+                         'with' => 
+                        array (
+                        ),
+                         'withCount' => 
+                        array (
+                        ),
+                         'preventsLazyLoading' => false,
+                         'perPage' => 15,
+                         'exists' => true,
+                         'wasRecentlyCreated' => false,
+                         'escapeWhenCastingToString' => false,
+                         'attributes' => 
+                        array (
+                          'cancellation_slab_id' => 7,
+                          'duration' => '18-24',
+                          'deduction' => '25',
+                        ),
+                         'original' => 
+                        array (
+                          'cancellation_slab_id' => 7,
+                          'duration' => '18-24',
+                          'deduction' => '25',
+                        ),
+                         'changes' => 
+                        array (
+                        ),
+                         'casts' => 
+                        array (
+                        ),
+                         'classCastCache' => 
+                        array (
+                        ),
+                         'attributeCastCache' => 
+                        array (
+                        ),
+                         'dates' => 
+                        array (
+                        ),
+                         'dateFormat' => NULL,
+                         'appends' => 
+                        array (
+                        ),
+                         'dispatchesEvents' => 
+                        array (
+                        ),
+                         'observables' => 
+                        array (
+                        ),
+                         'relations' => 
+                        array (
+                        ),
+                         'touches' => 
+                        array (
+                        ),
+                         'timestamps' => true,
+                         'hidden' => 
+                        array (
+                        ),
+                         'visible' => 
+                        array (
+                        ),
+                         'guarded' => 
+                        array (
+                          0 => '*',
+                        ),
+                      )),
+                      2 => 
+                      App\Models\CancellationSlabInfo::__set_state(array(
+                         'table' => 'cancellationslabs_info',
+                         'fillable' => 
+                        array (
+                          0 => 'cancellation_slab_id ',
+                          1 => 'duration',
+                          2 => 'deduction',
+                          3 => 'status',
+                          4 => 'created_by',
+                        ),
+                         'connection' => 'mysql',
+                         'primaryKey' => 'id',
+                         'keyType' => 'int',
+                         'incrementing' => true,
+                         'with' => 
+                        array (
+                        ),
+                         'withCount' => 
+                        array (
+                        ),
+                         'preventsLazyLoading' => false,
+                         'perPage' => 15,
+                         'exists' => true,
+                         'wasRecentlyCreated' => false,
+                         'escapeWhenCastingToString' => false,
+                         'attributes' => 
+                        array (
+                          'cancellation_slab_id' => 7,
+                          'duration' => '24-999',
+                          'deduction' => '20',
+                        ),
+                         'original' => 
+                        array (
+                          'cancellation_slab_id' => 7,
+                          'duration' => '24-999',
+                          'deduction' => '20',
+                        ),
+                         'changes' => 
+                        array (
+                        ),
+                         'casts' => 
+                        array (
+                        ),
+                         'classCastCache' => 
+                        array (
+                        ),
+                         'attributeCastCache' => 
+                        array (
+                        ),
+                         'dates' => 
+                        array (
+                        ),
+                         'dateFormat' => NULL,
+                         'appends' => 
+                        array (
+                        ),
+                         'dispatchesEvents' => 
+                        array (
+                        ),
+                         'observables' => 
+                        array (
+                        ),
+                         'relations' => 
+                        array (
+                        ),
+                         'touches' => 
+                        array (
+                        ),
+                         'timestamps' => true,
+                         'hidden' => 
+                        array (
+                        ),
+                         'visible' => 
+                        array (
+                        ),
+                         'guarded' => 
+                        array (
+                          0 => '*',
+                        ),
+                      )),
+                    ),
+                     'escapeWhenCastingToString' => false,
+                  )),
+                ),
+                 'touches' => 
+                array (
+                ),
+                 'timestamps' => true,
+                 'hidden' => 
+                array (
+                ),
+                 'visible' => 
+                array (
+                ),
+                 'guarded' => 
+                array (
+                  0 => '*',
+                ),
+              )),
+            ),
+             'touches' => 
+            array (
+            ),
+             'timestamps' => true,
+             'hidden' => 
+            array (
+            ),
+             'visible' => 
+            array (
+            ),
+             'guarded' => 
+            array (
+              0 => '*',
+            ),
+          )),
+          'bookingDetail' => 
+          Illuminate\Database\Eloquent\Collection::__set_state(array(
+             'items' => 
+            array (
+              0 => 
+              App\Models\BookingDetail::__set_state(array(
+                 'table' => 'booking_detail',
+                 'fillable' => 
+                array (
+                  0 => 'booking_id',
+                  1 => 'bus_seats_id',
+                  2 => 'seat_name',
+                  3 => 'seat_fare',
+                  4 => 'passenger_name',
+                  5 => 'passenger_gender',
+                  6 => 'passenger_age',
+                  7 => 'created_by',
+                ),
+                 'connection' => 'mysql',
+                 'primaryKey' => 'id',
+                 'keyType' => 'int',
+                 'incrementing' => true,
+                 'with' => 
+                array (
+                ),
+                 'withCount' => 
+                array (
+                ),
+                 'preventsLazyLoading' => false,
+                 'perPage' => 15,
+                 'exists' => true,
+                 'wasRecentlyCreated' => false,
+                 'escapeWhenCastingToString' => false,
+                 'attributes' => 
+                array (
+                  'id' => 18672,
+                  'booking_id' => 14301,
+                  'bus_seats_id' => 187733,
+                  'passenger_name' => 'lima',
+                  'passenger_gender' => 'F',
+                ),
+                 'original' => 
+                array (
+                  'id' => 18672,
+                  'booking_id' => 14301,
+                  'bus_seats_id' => 187733,
+                  'passenger_name' => 'lima',
+                  'passenger_gender' => 'F',
+                ),
+                 'changes' => 
+                array (
+                ),
+                 'casts' => 
+                array (
+                ),
+                 'classCastCache' => 
+                array (
+                ),
+                 'attributeCastCache' => 
+                array (
+                ),
+                 'dates' => 
+                array (
+                ),
+                 'dateFormat' => NULL,
+                 'appends' => 
+                array (
+                ),
+                 'dispatchesEvents' => 
+                array (
+                ),
+                 'observables' => 
+                array (
+                ),
+                 'relations' => 
+                array (
+                  'busSeats' => 
+                  App\Models\BusSeats::__set_state(array(
+                     'table' => 'bus_seats',
+                     'fillable' => 
+                    array (
+                      0 => 'bus_id',
+                      1 => 'ticket_price_id',
+                      2 => 'seats_id',
+                      3 => 'category',
+                      4 => 'bookStatus',
+                      5 => 'duration',
+                      6 => 'newfare',
+                      7 => 'created_by',
+                    ),
+                     'connection' => 'mysql',
+                     'primaryKey' => 'id',
+                     'keyType' => 'int',
+                     'incrementing' => true,
+                     'with' => 
+                    array (
+                    ),
+                     'withCount' => 
+                    array (
+                    ),
+                     'preventsLazyLoading' => false,
+                     'perPage' => 15,
+                     'exists' => true,
+                     'wasRecentlyCreated' => false,
+                     'escapeWhenCastingToString' => false,
+                     'attributes' => 
+                    array (
+                      'id' => 187733,
+                      'seats_id' => 1839,
+                    ),
+                     'original' => 
+                    array (
+                      'id' => 187733,
+                      'seats_id' => 1839,
+                    ),
+                     'changes' => 
+                    array (
+                    ),
+                     'casts' => 
+                    array (
+                    ),
+                     'classCastCache' => 
+                    array (
+                    ),
+                     'attributeCastCache' => 
+                    array (
+                    ),
+                     'dates' => 
+                    array (
+                    ),
+                     'dateFormat' => NULL,
+                     'appends' => 
+                    array (
+                    ),
+                     'dispatchesEvents' => 
+                    array (
+                    ),
+                     'observables' => 
+                    array (
+                    ),
+                     'relations' => 
+                    array (
+                      'seats' => 
+                      App\Models\Seats::__set_state(array(
+                         'table' => 'seats',
+                         'fillable' => 
+                        array (
+                          0 => 'bus_seat_layout_id',
+                          1 => 'seat_class_id',
+                          2 => 'seatText',
+                          3 => 'rowNumber',
+                          4 => 'colNumber',
+                          5 => 'berthType',
+                        ),
+                         'hidden' => 
+                        array (
+                          0 => 'created_at',
+                          1 => 'updated_at',
+                          2 => 'created_by',
+                          3 => 'status',
+                        ),
+                         'connection' => 'mysql',
+                         'primaryKey' => 'id',
+                         'keyType' => 'int',
+                         'incrementing' => true,
+                         'with' => 
+                        array (
+                        ),
+                         'withCount' => 
+                        array (
+                        ),
+                         'preventsLazyLoading' => false,
+                         'perPage' => 15,
+                         'exists' => true,
+                         'wasRecentlyCreated' => false,
+                         'escapeWhenCastingToString' => false,
+                         'attributes' => 
+                        array (
+                          'id' => 1839,
+                          'seatText' => '32',
+                        ),
+                         'original' => 
+                        array (
+                          'id' => 1839,
+                          'seatText' => '32',
+                        ),
+                         'changes' => 
+                        array (
+                        ),
+                         'casts' => 
+                        array (
+                        ),
+                         'classCastCache' => 
+                        array (
+                        ),
+                         'attributeCastCache' => 
+                        array (
+                        ),
+                         'dates' => 
+                        array (
+                        ),
+                         'dateFormat' => NULL,
+                         'appends' => 
+                        array (
+                        ),
+                         'dispatchesEvents' => 
+                        array (
+                        ),
+                         'observables' => 
+                        array (
+                        ),
+                         'relations' => 
+                        array (
+                        ),
+                         'touches' => 
+                        array (
+                        ),
+                         'timestamps' => true,
+                         'visible' => 
+                        array (
+                        ),
+                         'guarded' => 
+                        array (
+                          0 => '*',
+                        ),
+                      )),
+                    ),
+                     'touches' => 
+                    array (
+                    ),
+                     'timestamps' => true,
+                     'hidden' => 
+                    array (
+                    ),
+                     'visible' => 
+                    array (
+                    ),
+                     'guarded' => 
+                    array (
+                      0 => '*',
+                    ),
+                  )),
+                ),
+                 'touches' => 
+                array (
+                ),
+                 'timestamps' => true,
+                 'hidden' => 
+                array (
+                ),
+                 'visible' => 
+                array (
+                ),
+                 'guarded' => 
+                array (
+                  0 => '*',
+                ),
+              )),
+            ),
+             'escapeWhenCastingToString' => false,
+          )),
+        ),
+         'touches' => 
+        array (
+        ),
+         'timestamps' => true,
+         'hidden' => 
+        array (
+        ),
+         'visible' => 
+        array (
+        ),
+         'guarded' => 
+        array (
+          0 => '*',
+        ),
+      )),
+    ),
+     'escapeWhenCastingToString' => false,
+  )),
+  'cancel_status' => true,
+  'totalfare' => 12.1,
+  'Percentage' => '20',
+  'deductionPercentage' => '20%',
+  'deductAmount' => 2.42,
+  'GstOnCancelCharge' => 0.121,
+  'refundAmount' => 9.801,
+  'OdbusCancelCommission' => 1.21,
+  'ClientCancelCommission' => 1.21,
+)  
+[2024-04-20 12:25:22] local.INFO: Expected response code 250 but got code "554", with message "554 Message rejected: Sending paused for this account. For more information, please check the inbox of the email address associated with your AWS account.
+"  
